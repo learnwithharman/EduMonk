@@ -9,100 +9,124 @@ import {
     Users,
     Calendar,
     FileText,
-    Smartphone
+    Smartphone,
+    ArrowRight
 } from 'lucide-react';
 
 const features = [
     {
         icon: <BarChart3 size={24} />,
-        title: "Attendance Management",
-        description: "Track student attendance with automated systems, generate reports, and send notifications to parents instantly."
+        title: "Attendance",
+        description: "Automated student tracking with instant parent notifications."
     },
     {
         icon: <BookOpen size={24} />,
-        title: "Assignment Tracking",
-        description: "Create, distribute, and grade assignments digitally. Monitor submission status and provide feedback seamlessly."
+        title: "Assignments",
+        description: "Digital distribution and seamless grading workflows."
     },
     {
         icon: <Home size={24} />,
-        title: "Homework Management",
-        description: "Assign homework, track completion, and maintain detailed records of student progress across all subjects."
+        title: "Homework",
+        description: "Track completion and maintain detailed progress records."
     },
     {
         icon: <CreditCard size={24} />,
         title: "Fee Management",
-        description: "Handle fee collection, generate receipts, track payments, and send automated reminders to parents."
+        description: "Secure collection with automated payment reminders."
     },
     {
         icon: <GraduationCap size={24} />,
         title: "Grade Records",
-        description: "Maintain comprehensive grade books, calculate GPAs, and generate detailed academic performance reports."
+        description: "Comprehensive grade books and GPA calculation."
     },
     {
         icon: <Users size={24} />,
-        title: "Parent Communication",
-        description: "Keep parents informed with real-time updates, notifications, and detailed progress reports."
+        title: "Communication",
+        description: "Real-time updates and direct parent engagement."
     },
     {
         icon: <Calendar size={24} />,
-        title: "Timetable Management",
-        description: "Create and manage class schedules, teacher assignments, and room allocations efficiently."
+        title: "Timetable",
+        description: "Dynamic class schedules and teacher assignments."
     },
     {
         icon: <FileText size={24} />,
-        title: "Student Records",
-        description: "Maintain complete student profiles with academic history, contact information, and important documents."
+        title: "Directories",
+        description: "Complete student profiles and academic history."
     },
     {
         icon: <Smartphone size={24} />,
-        title: "Mobile Access",
-        description: "Access the system anywhere with mobile-responsive design and dedicated mobile applications."
+        title: "Mobile First",
+        description: "Full access anywhere with responsive applications."
     }
 ];
 
 const Features = () => {
     return (
-        <section id="features" className="py-20 bg-white relative">
+        <section id="features" className="py-24 relative overflow-hidden">
+            {/* Background Ornaments */}
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 rounded-full blur-[100px] -z-10" />
+            <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-secondary/5 rounded-full blur-[100px] -z-10" />
+
             <div className="container mx-auto px-6">
-                <div className="text-center max-w-2xl mx-auto mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
+                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div className="max-w-2xl">
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="text-primary font-bold text-sm uppercase tracking-widest mb-4"
+                        >
+                            The OS for Modern Schools
+                        </motion.div>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-text leading-tight"
+                        >
+                            Powerful Features. <br />
+                            <span className="text-gray-400">Zen-like Experience.</span>
+                        </motion.h2>
+                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-4xl font-heading font-bold text-text mb-4"
                     >
-                        Everything You Need
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-gray-600 text-lg"
-                    >
-                        Comprehensive tools to manage every aspect of your educational institution
-                    </motion.p>
+                        <button className="hidden md:flex items-center gap-3 text-text font-bold hover:text-primary transition-colors group">
+                            Explore All Features
+                            <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-primary transition-colors">
+                                <ArrowRight size={18} />
+                            </div>
+                        </button>
+                    </motion.div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="bg-neutral p-8 rounded-2xl hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1"
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ delay: index * 0.05, duration: 0.5 }}
+                            className="glass group p-8 rounded-[2.5rem] hover:bg-white hover:shadow-premium transition-all duration-500 border border-white/40 cursor-default"
                         >
-                            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-primary mb-8 shadow-sm group-hover:bg-primary group-hover:text-white group-hover:rotate-6 transition-all duration-500">
                                 {feature.icon}
                             </div>
-                            <h3 className="text-xl font-heading font-bold text-text mb-3 group-hover:text-primary transition-colors">
+                            <h3 className="text-2xl font-heading font-bold text-text mb-4 transition-colors">
                                 {feature.title}
                             </h3>
-                            <p className="text-gray-600 leading-relaxed">
+                            <p className="text-gray-500 leading-relaxed text-sm font-medium">
                                 {feature.description}
                             </p>
+                            
+                            <div className="mt-8 pt-6 border-t border-gray-50 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <span className="text-xs font-bold text-primary uppercase tracking-widest">Learn More</span>
+                                <ArrowRight size={14} className="text-primary" />
+                            </div>
                         </motion.div>
                     ))}
                 </div>
