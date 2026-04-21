@@ -33,3 +33,10 @@ EduMonk is a comprehensive school management platform designed to streamline adm
     npm run build
     ```
 
+
+## Contact
+
+- **Instagram**: [ded.lecter](https://www.instagram.com/ded.lecter/?hl=en)
+- **GitHub**: [learnwithharman](https://github.com/learnwithharman)
+- **Twitter**: [Harmxn_2005](https://x.com/Harmxn_2005)
+- **LinkedIn**: [Harman](https://www.linkedin.com/in/harman-068394327)
