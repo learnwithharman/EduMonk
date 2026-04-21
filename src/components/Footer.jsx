@@ -27,7 +27,7 @@ const Footer = () => {
                             {[
                                 { icon: <Github size={18} />, href: "https://github.com/learnwithharman" },
                                 { icon: <Twitter size={18} />, href: "https://x.com/Harmxn_2005" },
-                                { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/harman-068394327" },
+                                { icon: <Linkedin size={18} />, href: "https://www.linkedin.com/in/harman-068394327?utm_source=share_via&utm_content=profile&utm_medium=member_android" },
                                 { icon: <Instagram size={18} />, href: "https://www.instagram.com/ded.lecter/?hl=en" }
                             ].map((social, i) => (
                                 <a 

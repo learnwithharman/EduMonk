@@ -39,4 +39,4 @@ EduMonk is a comprehensive school management platform designed to streamline adm
 - **Instagram**: [ded.lecter](https://www.instagram.com/ded.lecter/?hl=en)
 - **GitHub**: [learnwithharman](https://github.com/learnwithharman)
 - **Twitter**: [Harmxn_2005](https://x.com/Harmxn_2005)
-- **LinkedIn**: [Harman](https://www.linkedin.com/in/harman-068394327)
+- **LinkedIn**: [Harman](https://www.linkedin.com/in/harman-068394327?utm_source=share_via&utm_content=profile&utm_medium=member_android)
